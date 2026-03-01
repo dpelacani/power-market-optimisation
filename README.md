@@ -60,6 +60,18 @@ Nuclear is cheap to run but expensive to start and slow to ramp — it wants to 
 
 ---
 
+## Repository structure
+
+```
+├── task.md               # The original problem statement as given by Claude
+├── my_solution.ipynb     # Main notebook — work through Parts 1, 2, and 3 here
+├── claude_solution.py    # Claude's own reference solution as a plain Python script
+├── plotting.py           # Reusable Plotly chart functions used by the notebook
+├── figures/              # Exported chart images referenced in this README
+```
+
+---
+
 ## How to run
 
 ```bash
