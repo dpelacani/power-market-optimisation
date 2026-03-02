@@ -100,8 +100,8 @@ def plot_stacked_generators(
     )
     fig.show()
 
-def plot_schedule_heatmap(df, title="Generator Power Output Schedule (MW) - UCLP Solution"):
-    fig = px.imshow(df, aspect='auto', color_continuous_scale='Blues', title=title)
+def plot_schedule_heatmap(df, title="Generator Power Output Schedule (MW) - UCLP Solution", zmin=None, zmax=None, colors='Blues'):
+    fig = px.imshow(df, aspect='auto', color_continuous_scale=colors, title=title, zmin=zmin, zmax=zmax)
     fig.update_layout(xaxis_title="Hour", yaxis_title="Generator")
     fig.show()
 
