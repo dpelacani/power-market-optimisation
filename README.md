@@ -90,7 +90,7 @@ The notebook is self-contained. `plotting.py` holds the reusable chart functions
 
 ---
 
-## Results (spoiler)
+## Main Results (spoiler)
 
 | Method | Marginal Cost | Startup Cost | Total Cost |
 |---|---|---|---|
@@ -138,6 +138,8 @@ The heatmap shows the MILP output schedule across all generators and hours. The 
 
 The demand balance shadow prices (derived by fixing binary variables and re-solving as a pure LP) closely track the SMP from Part 2, but capture one subtlety the naive merit-order reading misses: at hours 7–8, when coal is committed at minimum stable generation and nuclear has spare capacity, the true marginal cost of an extra MW is nuclear's £10/MWh rather than coal's £25/MWh. The dual variable correctly reflects this, whereas reading off the last-dispatched generator does not.
 
+![Greedy SMP vs dual variable](figures/true_smp.png)
+
 ---
 
 ### Capacity shadow prices — heatmap (Part 4)
@@ -147,6 +149,7 @@ Nuclear (G1) is the only generator with non-zero capacity shadow prices: −£15
 Two conditions must both hold for a capacity shadow price to be non-zero: (1) the generator must be at its capacity limit, and (2) a more expensive committed generator must be producing above its own operating floor, so that an extra MW of cheap capacity can displace costly output. Binding alone is not enough — if there is no expensive unit to displace, extra capacity has nowhere to go and the cost does not change.
 
 At peak hours (16–21), nuclear capacity is the binding constraint. Adding 10 MW of nuclear capacity would save £150/hour at each of those hours (£15/MWh × 10 MW).
+![Capacity Shadow Prices](figures/capacity_shadow.png)
 
 ---
 
@@ -156,6 +159,7 @@ During the midday dip (hours 14–15), coal is pinned at its 100 MW operating fl
 
 This directly validates the UC decision from Part 2: keeping coal on through the dip costs £3,000 in extra operating expense but avoids an £8,000 restart cost. The shadow price puts an exact price tag on that trade-off.
 
+![Minimum Output Shadow Prices](figures/minimum_output_shadow.png)
 ---
 
 ## Conclusions and Reflections
