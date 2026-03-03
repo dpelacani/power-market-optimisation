@@ -108,7 +108,7 @@ Note that the MILP actually has a slightly *higher* marginal cost than greedy �
 
 ### Generation mix — greedy dispatch
 
-![Greedy generation mix](figures/gens-greedy.png)
+![Greedy generation mix](figures/gens-greedyy.png)
 
 The greedy solution is clean and intuitive: nuclear (G1) runs all 24 hours as the baseload, and coal (G2) fills in from hour 7 onwards when morning demand ramps above nuclear's 400 MW capacity. The three gas and oil generators are never needed — this demand profile is comfortably within the two cheapest generators. The night trough (hours 0–6) and late evening (hour 23) are nuclear-only, setting the SMP at £10/MWh.
 
