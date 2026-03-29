@@ -161,6 +161,8 @@ The **dual variable** correctly identifies this marginal cost. The concept is id
 
 By fixing these binary variables at optimal value and re-solving as a pure continuous Linear Program, the dual variable acts as a piecewise Lagrange multiplier, providing a stable marginal price even when the system is operating at a physical floor or ceiling.
 
+SMP is used for **financial settlement and paying generators** in the actual market, while shadow prices are used for **internal system optimisation** to identify the true physical cost of meeting the next unit of demand.
+
 ![Greedy SMP vs dual variable](figures/true_smp.png)
 
 ---
