@@ -155,7 +155,7 @@ The heatmap shows the MILP output schedule across all generators and hours. The 
 
 ### Demand-Balance Shadow Prices (Part 4)
 
-The demand-balance shadow prices are the **true marginal cost of serving 1 extra MW at hour**. Although they closely track with the System Marginal Price (SMP), they depict a more accurate, low-level representation of the market.
+The demand-balance shadow prices are the **true marginal cost of serving 1 extra MW of demand at hour $t$**. Although they closely track with the System Marginal Price (SMP), they depict a more accurate, low-level representation of the market.
 
 During hours 7–8, the **coal plant is forced to run at its minimum stable level**, while the nuclear plant still has spare capacity. In this scenario, the true cost of producing one extra MW is the nuclear plant’s £10/MWh, not the coal plant’s £25/MWh, since the nuclear plant still has output headroom.
 
