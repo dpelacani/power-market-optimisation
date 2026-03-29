@@ -173,7 +173,7 @@ SMP is used for **financial settlement and paying generators** in the actual mar
 
 ### Capacity Shadow Prices — heatmap (Part 4)
 
-The capacity shadow prices are **the cost changes if generator $g$ had 1 MW more capacity at hour $t$**
+The capacity shadow prices are **the cost changes if generator $g$ had 1 MW more capacity at hour $t$**.
 
 Nuclear (G1) is the only generator with non-zero capacity shadow prices: −£15/MWh during hours 9–13 and 16–21, when it is running at full output and coal is producing above its minimum stable floor. All other generators have zero capacity shadow prices throughout the day.
 
