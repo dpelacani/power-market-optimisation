@@ -192,11 +192,13 @@ During the midday dip (hours 14–15), coal is pinned at its 100 MW operating fl
 
 The shadow price on the minimum stable generation constraint for coal is £15/MWh: each MW addition in coal's floor would require nuclear to substitute one unit at £10 towards coal at £25, adding £15/MWh. 
 
+![Minimum Output Shadow Prices](figures/minimum_output_shadow.png)
+
 On the other hand, the shadow price of **decreasing** the minimum stable generation of coal would decrease the cost by £15/MWh. Lowering coal's floor from 100 MW to zero would save £1,500/hour, or £3,000 across the two dip hours.
 
 This directly validates the UC decision from Part 2: keeping coal on through the dip costs £3,000 in extra operating expense but avoids an £8,000 restart cost. The shadow price puts an exact price tag on that trade-off.
 
-![Minimum Output Shadow Prices](figures/minimum_output_shadow.png)
+
 ---
 
 ## Conclusions and Reflections
