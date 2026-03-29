@@ -186,6 +186,8 @@ At peak hours (16–21), nuclear capacity is the binding constraint. Adding 10 M
 
 ### Minimum stable generation shadow price (Part 4)
 
+Minimum stable generation shadow prices are **the cost changes if generator $g$ had 1 MW more of minimum generation demand at hour $t$**.
+
 During the midday dip (hours 14–15), coal is pinned at its 100 MW operating floor while nuclear has ~280 MW of spare capacity. The shadow price on the minimum stable generation constraint for coal is £15/MWh: each MW reduction in coal's floor would allow nuclear to substitute at £10 instead of coal at £25, saving £15/MWh. Lowering coal's floor from 100 MW to zero would save £1,500/hour, or £3,000 across the two dip hours.
 
 This directly validates the UC decision from Part 2: keeping coal on through the dip costs £3,000 in extra operating expense but avoids an £8,000 restart cost. The shadow price puts an exact price tag on that trade-off.
