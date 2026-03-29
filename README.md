@@ -55,6 +55,16 @@ Nuclear is cheap to run but expensive to start and slow to ramp — it wants to 
 
 ---
 
+## 24h Demand Profile
+
+![Hourly demand](figures/demand.png)
+
+Demand follows a classic residential/commercial weekday pattern. It sits in a shallow night trough from midnight to 5h, then ramps sharply through the morning, plateauing from 8h to 13h. Then a midday dip at 14–15h briefly pulls before a second rise in the afternoon into the evening peak at 19h. Demand then falls off steadily through the night.
+
+Total installed capacity is 1,050 MW; peak demand is 625 MW, leaving 425 MW of headroom at the tightest point.
+
+---
+
 ## Key concepts you'll encounter
 
 **System Marginal Price (SMP)** — the marginal cost of the last (most expensive) generator dispatched. All generators in the market receive this price, regardless of their own cost. This is why cheap generators are profitable.
