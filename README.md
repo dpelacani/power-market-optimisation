@@ -141,7 +141,7 @@ The MILP schedule looks similar at a glance, but there is a key difference at ho
 
 ![SMP comparison](figures/smp-comparison.png)
 
-Both solutions produce the same SMP curve for the vast majority of the day: £10/MWh overnight (nuclear is the marginal unit) and £25/MWh through the daytime (coal is marginal). The two lines are nearly identical, which tells you something important: the *commitment* decisions changed, but the *price signal* is almost unaffected. In real markets, small changes in which unit is marginal can have large price implications — this problem is simple enough that it doesn't show that complexity.
+Both solutions produce the same SMP curve for the vast majority of the day: £10/MWh overnight (nuclear is the marginal unit) and £25/MWh through the daytime (coal is marginal). The two lines are nearly identical, except for the 14h-15h slot where greedy decides to shut down coal and **UCLP runs it minimum stable generation** to avoid further startup costs. This tells you something important: the *commitment* decisions changed, but the *price signal* is almost unaffected. In real markets, small changes in which unit is marginal can have large price implications — this problem is simple enough that it doesn't show that complexity.
 
 ---
 
@@ -155,7 +155,11 @@ The heatmap shows the MILP output schedule across all generators and hours. The 
 
 ### Shadow prices — demand balance (Part 4)
 
-The demand balance shadow prices (derived by fixing binary variables and re-solving as a pure LP) closely track the SMP from Part 2, but capture one subtlety the naive merit-order reading misses: at hours 7–8, when coal is committed at minimum stable generation and nuclear has spare capacity, the true marginal cost of an extra MW is nuclear's £10/MWh rather than coal's £25/MWh. The dual variable correctly reflects this, whereas reading off the last-dispatched generator does not.
+The demand-balance shadow prices closely track the System Marginal Price (SMP), but they capture a subtlety the simple merit-order model misses. During hours 7–8, the **coal plant is forced to run at its minimum stable level**, while the nuclear plant still has spare capacity. In this scenario, the true cost of producing one extra MW is the nuclear plant’s £10/MWh, not the coal plant’s £25/MWh, since the nuclear plant still has output headroom.
+
+The **dual variable** correctly identifies this marginal cost. The concept is identical to a Lagrange multiplier: both represent the "cost of relaxing a constraint". However, a Lagrange multiplier ($\lambda$) typically finds the slope of a **smooth, continuous curve**, whereas power markets are "staircase" functions with sharp corners (binary "on/off" decisions and rigid capacity limits).
+
+By fixing these binary variables at optimal value and re-solving as a pure continuous Linear Program, the dual variable acts as a piecewise Lagrange multiplier, providing a stable marginal price even when the system is operating at a physical floor or ceiling.
 
 ![Greedy SMP vs dual variable](figures/true_smp.png)
 
