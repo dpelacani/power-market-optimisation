@@ -177,7 +177,7 @@ The capacity shadow prices are **the cost changes if generator $g$ had 1 MW more
 
 Nuclear (G1) is the only generator with non-zero capacity shadow prices: −£15/MWh during hours 9–13 and 16–21, when it is running at full output and coal is producing above its minimum stable floor. All other generators have zero capacity shadow prices throughout the day.
 
-Two conditions must both hold for a capacity shadow price to be non-zero: (1) the generator must be at its capacity limit, and (2) a more expensive committed generator must be producing above its own operating floor, so that an extra MW of cheap capacity can displace costly output. Binding alone is not enough — if there is no expensive unit to displace, extra capacity has nowhere to go and the cost does not change.
+Two conditions must both hold for a capacity shadow price to be non-zero: (1) the generator must be at its capacity limit, and (2) a more expensive committed generator must be producing above its own operating floor, so that an extra MW of cheap capacity can displace the most costly output to the least costly. Binding (maximum output) alone is not enough — if there is no expensive unit available to displace, extra capacity has nowhere to go and the cost does not change.
 
 At peak hours (16–21), nuclear capacity is the binding constraint. Adding 10 MW of nuclear capacity would save £150/hour at each of those hours (£15/MWh × 10 MW).
 ![Capacity Shadow Prices](figures/capacity_shadow.png)
