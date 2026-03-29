@@ -29,7 +29,7 @@ The simplest approach: just rank generators by marginal cost and fill demand fro
 You'll produce a generation mix chart and a System Marginal Price (SMP) curve. The SMP is the price set by the most expensive generator needed to meet demand — this is how real electricity markets price power.
 
 ### Part 2 — Unit Commitment with Linear Programming
-Now add the real constraints: startup costs, minimum run times, minimum stable generation. Formulate this as a Mixed-Integer Linear Programme (MILP) using `PuLP` and solve it optimally.
+Now add the real constraints: **<span style="color:green">startup costs, minimum run times, minimum stable generation.</span>** Formulate this as a Mixed-Integer Linear Programme (MILP) using `PuLP` and solve it optimally.
 
 You'll see how much cheaper the optimised schedule is versus the greedy one, and why — the solver avoids unnecessary start-ups and keeps cheap baseload (nuclear) running continuously.
 
