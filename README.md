@@ -153,9 +153,11 @@ The heatmap shows the MILP output schedule across all generators and hours. The 
 
 ---
 
-### Shadow prices — demand balance (Part 4)
+### Demand-Balance Shadow Prices (Part 4)
 
-The demand-balance shadow prices closely track the System Marginal Price (SMP), but they capture a subtlety the simple merit-order model misses. During hours 7–8, the **coal plant is forced to run at its minimum stable level**, while the nuclear plant still has spare capacity. In this scenario, the true cost of producing one extra MW is the nuclear plant’s £10/MWh, not the coal plant’s £25/MWh, since the nuclear plant still has output headroom.
+The demand-balance shadow prices are the **true marginal cost of serving 1 extra MW at hour**. Although they closely track with the System Marginal Price (SMP), they depict a more accurate, low-level representation of the market.
+
+During hours 7–8, the **coal plant is forced to run at its minimum stable level**, while the nuclear plant still has spare capacity. In this scenario, the true cost of producing one extra MW is the nuclear plant’s £10/MWh, not the coal plant’s £25/MWh, since the nuclear plant still has output headroom.
 
 The **dual variable** correctly identifies this marginal cost. The concept is identical to a Lagrange multiplier: both represent the "cost of relaxing a constraint". However, a Lagrange multiplier ($\lambda$) typically finds the slope of a **smooth, continuous curve**, whereas power markets are "staircase" functions with sharp corners (binary "on/off" decisions and rigid capacity limits).
 
@@ -169,7 +171,9 @@ SMP is used for **financial settlement and paying generators** in the actual mar
 
 ---
 
-### Capacity shadow prices — heatmap (Part 4)
+### Capacity Shadow Prices — heatmap (Part 4)
+
+The capacity shadow prices are **the cost changes if generator $g$ had 1 MW more capacity at hour $t$**
 
 Nuclear (G1) is the only generator with non-zero capacity shadow prices: −£15/MWh during hours 9–13 and 16–21, when it is running at full output and coal is producing above its minimum stable floor. All other generators have zero capacity shadow prices throughout the day.
 
