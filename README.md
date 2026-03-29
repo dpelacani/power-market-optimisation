@@ -72,7 +72,17 @@ Total installed capacity is 1,050 MW; peak demand is 625 MW, leaving 425 MW of h
 
 ## Key concepts you'll encounter
 
-**System Marginal Price (SMP)** — the marginal cost of the last (most expensive) generator dispatched. All generators in the market receive this price, regardless of their own cost. This is why cheap generators are profitable.
+**System Marginal Price (SMP)** — the marginal cost of the last (most expensive) generator dispatched. All generators in the market receive this price, regardless of their own cost. For instance:
+
+| Generator Type | Their Bid (Cost) | <span style="color:green; font-weight:bold">SMP (Paid)</span> | Profit |
+| :--- | :--- | :--- | :--- |
+| **Wind Farm** | £5 | £70 | £65 |
+| **Solar Farm** | £10 | £70 | £60 |
+| **Gas Plant** | £68 | £70 | £2 |
+
+This is why cheap generators are profitable.
+
+The main catch with paying the "true" price is that a wind farm with a £5 cost won't bid £5 anymore. If they think the market will need a gas plant at £70, they will bid £69 to make sure they are still picked while getting the maximum possible money. So SMP regularises it at no difference to consumer.
 
 **Merit order** — ranking generators by marginal cost. The cheapest runs first, the most expensive only when needed. The shape of this stack determines the price.
 
